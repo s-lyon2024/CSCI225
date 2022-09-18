@@ -19,8 +19,8 @@
         <!-- User Feedback -->
         <div class="userfb">
             <form name="feedback">
-                
-                <p>*First Name: <input type="name" placeholder="anonymous" name="fname" required></p>
+                 <fieldset>
+                <p>*First Name: <input type="name" placeholder="anonymous" name="fname" required autofocus></p>
                 <p>*Last Name: <input type="name" placeholder="anonymous" name="lname" required></p>
                 <p>Email:<input type="email" placeholder="name@domain.com" name="mail"></p>
                 
@@ -57,11 +57,13 @@
                         <option value="10"></option>
                     </datalist>
                 </p>
-                <p> <input type="submit" name="submt" value="Submit"> <input type="reset" name="delete" value="Clear"></p>
 
-
+                <p>Let me know your thoughts: <br>
+                    <textarea name="comment" id="onetextarea" cols="50" rows="5"></textarea></p>
+            </fieldset>
+                <p> <input type="submit" name="submt" value="Submit" onclick="alert('Thank you!')"> 
+                    <input type="reset" name="delete" value="Clear"></p>
             </form>
-
         </div>
         
     </body>
