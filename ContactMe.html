@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Contact Me Page </title>
+</head>
+
+    <body>
+
+        <!-- Embedded Video -->
+        <div class = "emvid">
+            <h1> Here is an educational video I watched recently: </h1>
+            <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/QN96JOm7lfU" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- User Feedback -->
+        <div class="userfb">
+            <form name="feedback">
+                
+                <p>*First Name: <input type="name" placeholder="anonymous" name="fname" required></p>
+                <p>*Last Name: <input type="name" placeholder="anonymous" name="lname" required></p>
+                <p>Email:<input type="email" placeholder="name@domain.com" name="mail"></p>
+                
+				<p>Would you reccomend this website?</p>
+				<p><input type="radio" name="recQ" value="yes" checked>Yes, I will &#128522; </p>
+				<p><input type="radio" name="recQ" value="no">No, I won't  &#128532; </p>
+
+               <p> Select your favorite website from the list: <select name="favsite" id="selectsite">
+                    <option value="goog"> Google</option>
+                    <option value="twit">Twitter</option>
+                    <option value="fb">Facebook</option>
+                    <option value="ig">Instagram</option>
+                    <option value="pint">Pinterest</option>
+                    <option value="spot">Spotify</option>
+                    <option value="twtch">Twitch</option>
+                    <option value="this"> This website &#128526;</option>
+                    <option value="other">Something else!</option>
+                </select>
+                </p>
+
+                <p> Rate this website:
+                    <input type="range" list="tickmarks" name="rating" min="1" max="10">
+                    <!-- Setting tickmarks for range slider -->
+                    <datalist id = tickmarks>
+                        <option value="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
+                        <option value="4"></option>
+                        <option value="5"></option>
+                        <option value="6"></option>
+                        <option value="7"></option>
+                        <option value="8"></option>
+                        <option value="9"></option>
+                        <option value="10"></option>
+                    </datalist>
+                </p>
+                <p> <input type="submit" name="submt" value="Submit"> <input type="reset" name="delete" value="Clear"></p>
+
+
+            </form>
+
+        </div>
+        
+    </body>
+</html>
