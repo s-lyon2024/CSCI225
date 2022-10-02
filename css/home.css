@@ -1,0 +1,209 @@
+/* layout */
+
+ 
+div :not(h1, #navbar), address :not(p, b){
+    position: absolute;
+    display: none; 
+    top: 40%;
+    left: 43%;
+}
+
+
+#navbar {
+    position: fixed;
+    top: 0px;
+    left: 20%;
+    background-color: hsla(37, 100%, 46%, 0.6); 
+} 
+
+#navbar ul li{
+    display: inline-block; 
+    margin: 5px auto;
+    padding: 2px;
+    border: hsl(150, 50%, 50%) outset 2px;
+    list-style-image: url(../images/pumpkin.png);
+}
+
+
+footer{
+    position: fixed;
+    bottom: 0px;
+    left: 45%;
+    padding: 3px;
+}
+
+div.introduction h1{
+    position: absolute;
+    left: 10%;
+    bottom: 50%;
+}
+
+div.assignment h1{
+    position: absolute;
+    left: 15%;
+    bottom: 20%;
+}
+
+div.portfolio h1 {
+    position: absolute;
+    right: 10%;
+    bottom: 50%;
+}
+
+div.schedule h1{
+    position: absolute;
+    right: 15%;
+    bottom: 20%
+}
+
+#contact {
+    position: fixed;
+    bottom: 5%;
+    left: 45%;
+    padding: 6px;
+}
+
+#contact a{
+    top:55%;
+    right: 45%;
+    width: 15%;
+    padding: 10px;
+}
+
+
+div.introduction p{
+    top:25%;
+    left: 40%;
+    width: 25%;
+    padding: 10px;
+}
+
+#charlie{ 
+    top:55%;
+    left: 40%;
+    width: 5%;
+}
+
+#lidda{
+    top:55%;
+    right: 40%;
+    width: 5%; 
+}
+
+div.portfolio p{
+    top:25%;
+    left: 40%;
+    width: 25%;
+    padding: 10px; 
+}
+
+/* Hover */
+div.introduction h1:hover ~ p {
+    display: block;
+    transform:skewX(15deg);
+} 
+
+div.assignment h1:hover ~ ol {
+    display: block;
+}
+
+div.portfolio h1:hover ~ p{
+    display: block;
+    transform:skewX(15deg);
+}
+
+div.schedule h1:hover ~ #sched{
+    display: block;
+}
+
+#contact:hover ~ a{
+    display: block;
+}
+
+a:hover{
+    font-style: italic;
+}
+
+/* transform */ 
+
+h1, #contact {
+    transition: ease-out 2s, transform 2s;
+}
+
+
+/* font */
+
+h1{
+    background-color: hsla(74, 5%, 94%, 0.6);
+    font-family: 'Goblin One', sans-serif;
+    text-transform:capitalize;
+    letter-spacing: 5px;
+    text-shadow: 4px 2px 5px hsl(276, 5%, 37%);
+    padding: 5px;
+}
+
+p, figcaption, ol, li, a {
+    background-color: hsla(78, 100%, 62%, 0.6);
+    font-family: 'IM Fell Great Primer';
+    color: black;
+    font-weight:900;
+    line-height: normal;
+    text-align: center;
+}
+
+p::first-letter{
+    font-size: 140%;
+    text-transform:capitalize;
+}
+
+div.portfolio p{
+    box-shadow: 3px 6px #566f4d;
+}
+
+#sched:nth-child(even){
+    background-color: hsl(65, 100%, 90%);
+}
+
+a{
+  font-family: 'IM Fell Great Primer';  
+  text-decoration: none; 
+  font-style: bold;
+  color: hsl(0, 100%, 20%);  
+} 
+
+/* Border */
+
+h1, #contact, footer{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+div.portfolio, address, div.schedule{
+    border-right-style: 3px solid #fff;
+    border-bottom-style: 3px solid #fff;
+}
+
+h1, div.navbar li{
+    border-style: round;
+}
+
+#sched{
+    border: ridge;
+    padding: 5px;
+    vertical-align: baseline;
+    empty-cells: show;
+}
+
+
+/* Background image */
+body{
+    background-image: url(../images/wallpaper.jpg), url(../images/leaves.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50px;
+    background-color: hsl(350, 100%, 13%);
+}
+
+footer, #contact{
+    background-color: hsla(37, 100%, 46%, 0.6);
+}
+

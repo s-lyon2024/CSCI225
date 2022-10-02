@@ -3,12 +3,19 @@
 
 <head>
     <title> CSCI225 Course Website Sophie Lyon </title>
+
+    <link rel="stylesheet" href="css/home.css">
+    <!-- paragraph font -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer">
+    <!-- header font -->  
+    <link rel="stylesheet" type="text/css" href="http://fonts.cdnfonts.com/css/goblin-one">
+
 </head>
 
 <body>
 
     <!--  Nav Section -->
-    <div class = "navbar" > 
+    <div class = "navbar" id= "navbar"> 
         <ul>
             <li><a href="https://www.usca.edu/"> USCA Homepage</a></li>
             <li> <a href="#assign"> Assignment Section </a></li>
@@ -20,18 +27,20 @@
 
     <!-- Intro Section -->
     <div class = "introduction">
-        <h1> <u> Introduction </u></h1>
-        <p> Hey, what's up you guys. My legal name is Sophie, but my friends call me Bo. 
+        <h1> Introduction </h1>
+         <p> Hey, what's up you guys. My legal name is Sophie, but my friends call me Bo. 
             This is my Junior year as a CS Major, so I'm pretty excited about that.
             In my free time, I listen to music, play Wild Rift, and doodle.
             Now I will show you my two dogs, Charlie and Lidda. </p>
-     <figure>  <img src="images/charlieclose.jpg" alt="A picture of Charlie">
-        <figcaption> <small> Charlie </small> &hearts; </figcaption>
-    </figure> 
-    <figure>
-        <img src="images/liddasm.jpg" alt="A picture of Lidda">
-        <figcaption> <small> Lidda </small> &Ouml; </figcaption>
-    </figure>
+        <section class="content" id="introcontent">
+        <figure id = "charlie">  <img src="images/charlieclose.jpg" alt="A picture of Charlie">
+            <figcaption> <small> Charlie </small> &hearts; </figcaption>
+        </figure> 
+        <figure id = "lidda">
+            <img src="images/liddasm.jpg" alt="A picture of Lidda">
+            <figcaption> <small> Lidda </small> &Ouml; </figcaption>
+        </figure>
+    </section>
     </div>
 
     <div class="assignment">
@@ -40,6 +49,7 @@
             <li> <a href="docx/Assignment1.pdf">Assignment 1 pdf</a></li>
             <li> <a href="docx/Assignment2.pdf"> Assignment 2 pdf</a>
                     <ul> <li><a href="ContactMe.html" target="_blank"> "Contact Me" Web Document </a></li> </ul> </li>
+            <li> <a href="docx/Assignment3.pdf"> Assignment 3 pdf </a></li>
         </ol>
     </div>
 
@@ -63,7 +73,7 @@
     <div class="schedule">
         <h1>Schedule</h1>
 
-        <table border = "1">
+        <table id="sched">
             <tr> <td></td> <td>Monday </td> <td>Tuesday </td> <td>Wednesday </td> <td>Thursday </td> <td>Friday </td> </tr>
             <tr><td>9:00-10:00</td> <td>Bio 101 <br> Intro to Bio <br> 9:00-10:00</td> <td rowspan="2">His 101 <br> History of Civilization <br> 9:00-10:30</td> <td>Bio 101 <br> Intro to Bio <br> 9:00-10:00</td> <td rowspan="2">His 101 <br> History of Civilization <br> 9:00-10:30</td> <td>Bio 101 <br> Intro to Bio <br> 9:00-10:00</td></tr>
             <tr><td>10:00-11:00</td>  <td></td> <td></td> <td></td></tr>
@@ -75,7 +85,7 @@
     </div>
     
     <footer>
-        <p> Sophie Lyon 2022 &copy; </p>
+        <p1> Sophie Lyon 2022 &copy; </p1>
     </footer>
 
 </body>
