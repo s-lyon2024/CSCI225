@@ -243,7 +243,7 @@ div.portfolio .special p{
 a{
   font-family: 'IM Fell Great Primer';  
   text-decoration: none; 
-  font-style: bold;
+  font-style: normal;
   color: hsl(0, 100%, 20%);  
 } 
 
@@ -255,9 +255,9 @@ h1, #contact, footer{
     border-top-right-radius: 10px;
 }
 
-div.portfolio .special, address .special, div.schedule .special{
-    border-right-style: 3px solid #fff;
-    border-bottom-style: 3px solid #fff;
+div.portfolio .special p, address .special a{
+    border-right-style: 3px solid rgb(24, 0, 0);
+    border-bottom-style: 3px solid rgb(24, 0, 0);
 }
 
 /* rounded corners for navbar links */
