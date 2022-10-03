@@ -1,11 +1,11 @@
-/* layout */
 
- 
-div :not(h1, #navbar), address :not(p, b){
-    position: absolute;
-    display: none; 
+/* LAYOUT */
+div.special{
+    display:block;
+    position:fixed;
     top: 40%;
     left: 43%;
+    visibility: hidden;
 }
 
 
@@ -23,7 +23,6 @@ div :not(h1, #navbar), address :not(p, b){
     border: hsl(150, 50%, 50%) outset 2px;
     list-style-image: url(../images/pumpkin.png);
 }
-
 
 footer{
     position: fixed;
@@ -70,7 +69,6 @@ div.schedule h1{
     padding: 10px;
 }
 
-
 div.introduction p{
     top:25%;
     left: 40%;
@@ -97,27 +95,28 @@ div.portfolio p{
     padding: 10px; 
 }
 
-/* Hover */
-div.introduction h1:hover ~ p {
+        /* HOVER */
+div.introduction h1:hover ~ .special {
     display: block;
-    transform:skewX(15deg);
+    visibility: visible;
+    /* transform:skewX(15deg); */
 } 
 
-div.assignment h1:hover ~ ol {
-    display: block;
+div.assignment h1:hover ~ .special {
+    visibility: visible;
 }
 
-div.portfolio h1:hover ~ p{
-    display: block;
-    transform:skewX(15deg);
+div.portfolio h1:hover ~ .special{
+    visibility: visible;
+    /* transform:skewX(15deg); */
 }
 
-div.schedule h1:hover ~ #sched{
-    display: block;
+div.schedule h1:hover ~ .special{
+    visibility: visible;
 }
 
-#contact:hover ~ a{
-    display: block;
+#contact:hover ~ .special{
+    visibility: visible;
 }
 
 a:hover{
@@ -130,9 +129,7 @@ h1, #contact {
     transition: ease-out 2s, transform 2s;
 }
 
-
 /* font */
-
 h1{
     background-color: hsla(74, 5%, 94%, 0.6);
     font-family: 'Goblin One', sans-serif;
@@ -160,7 +157,7 @@ div.portfolio p{
     box-shadow: 3px 6px #566f4d;
 }
 
-#sched:nth-child(even){
+.schedule .special tr:nth-child(even){
     background-color: hsl(65, 100%, 90%);
 }
 
@@ -187,7 +184,7 @@ h1, div.navbar li{
     border-style: round;
 }
 
-#sched{
+.schedule table{
     border: ridge;
     padding: 5px;
     vertical-align: baseline;
