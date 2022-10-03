@@ -1,27 +1,27 @@
 
-/* LAYOUT */
+    /* LAYOUT */
+/* hide all special classes */
 div.special{
-    display:block;
-    position:fixed;
-    top: 40%;
-    left: 43%;
+    position: absolute;
     visibility: hidden;
 }
-
-
+/* layout for fixed elements */
 #navbar {
     position: fixed;
     top: 0px;
-    left: 20%;
+    left: 237px;
     background-color: hsla(37, 100%, 46%, 0.6); 
 } 
 
-#navbar ul li{
+#navbar ul, #navbar li{
     display: inline-block; 
-    margin: 5px auto;
+    margin: 5px 5px 5px 5px;
     padding: 2px;
     border: hsl(150, 50%, 50%) outset 2px;
-    list-style-image: url(../images/pumpkin.png);
+}
+
+#navbar li{
+    list-style-image: url("../images/pumpkin.png");
 }
 
 footer{
@@ -30,7 +30,7 @@ footer{
     left: 45%;
     padding: 3px;
 }
-
+/* Layout for headers */
 div.introduction h1{
     position: absolute;
     left: 10%;
@@ -54,7 +54,7 @@ div.schedule h1{
     right: 15%;
     bottom: 20%
 }
-
+/* layout for contact header and link */
 #contact {
     position: fixed;
     bottom: 5%;
@@ -62,74 +62,133 @@ div.schedule h1{
     padding: 6px;
 }
 
-#contact a{
-    top:55%;
-    right: 45%;
+#contact ~ .special{
+    top: 38%;
+    right: 42%;
     width: 15%;
     padding: 10px;
 }
-
-div.introduction p{
-    top:25%;
+/* layout for introduction elements */
+div.introduction .special{
+    top: 10%;
     left: 40%;
     width: 25%;
     padding: 10px;
 }
 
 #charlie{ 
-    top:55%;
-    left: 40%;
-    width: 5%;
+    float: left;
+    margin: 5px;
+}
+
+#charlie figcaption{
+    width: fit-content;
 }
 
 #lidda{
-    top:55%;
-    right: 40%;
-    width: 5%; 
+    float: right; 
+    margin: 5px; 
 }
 
-div.portfolio p{
-    top:25%;
-    left: 40%;
-    width: 25%;
+#lidda figcaption{
+    width: fit-content;
+}
+/* layout for portfolio section */
+div.portfolio .special{
+    top: 10%;
+    left: 38%;
+    width: 30%;
+    padding: 10px; 
+}
+ 
+.portfolio .special li{ 
+    list-style-image: url("../images/pumpkinsm.png");     
+    text-align: left;
+}
+/* layout for assignment */
+.assignment .special{
+    top: 20%;
+    left: 42%;
+    width: 20%;
     padding: 10px; 
 }
 
+.assignment .special li{
+    text-align: left;
+}
+
+.assignment .special ul li{
+    list-style-image: url("../images/pumpkinsmer.png"); 
+}
+/*  layout for schedule*/
+.schedule .special{
+    top: 25%;
+    left: 20%;
+    width: fit-content;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 3px;
+}
+
         /* HOVER */
+/*  hover and transform for intro */
 div.introduction h1:hover ~ .special {
     display: block;
     visibility: visible;
-    /* transform:skewX(15deg); */
 } 
 
+div.introduction h1:hover ~ .special figure{
+    transform:scale(1.2,1.2); 
+} 
+/* hover for assignment */
 div.assignment h1:hover ~ .special {
+    display: block;
     visibility: visible;
 }
 
+/* hover for portfolio */
 div.portfolio h1:hover ~ .special{
+    display: block;
     visibility: visible;
-    /* transform:skewX(15deg); */
 }
 
+/* hover for schedule */
 div.schedule h1:hover ~ .special{
+    display: block;
     visibility: visible;
 }
 
-#contact:hover ~ .special{
+/* hover for contact info */
+#contact:hover ~ .special {
+    display: block;
     visibility: visible;
 }
-
+/* style change for links */
 a:hover{
     font-style: italic;
 }
 
-/* transform */ 
-
-h1, #contact {
-    transition: ease-out 2s, transform 2s;
+        /* TRANSITION*/ 
+/* transition for introduction elements */
+.introduction .special figure{
+    transition-delay: 2s;
+    transition: transform 2s;
 }
 
-/* font */
+/* transition delay for assignment elements */
+/* this is to give the user enough time to click links */
+ .assignment .special{
+    transition-duration: 10s;
+ }
+
+ /* transition delay for contact section */
+address .special{
+    transition-duration: 6s;
+}
+
+        /* FONT */
+
+/* h1 font and color */
 h1{
     background-color: hsla(74, 5%, 94%, 0.6);
     font-family: 'Goblin One', sans-serif;
@@ -139,7 +198,8 @@ h1{
     padding: 5px;
 }
 
-p, figcaption, ol, li, a {
+/* other text font and color */
+p, figcaption, ol, #navbar li, a {
     background-color: hsla(78, 100%, 62%, 0.6);
     font-family: 'IM Fell Great Primer';
     color: black;
@@ -148,19 +208,38 @@ p, figcaption, ol, li, a {
     text-align: center;
 }
 
+/* color for footer and contact header */
+footer, #contact{
+    background-color: hsla(37, 100%, 46%, 0.6);
+}
+
+/* font for bigger list font */
+li:not(#navbar li), .assignment .special ul li, address .special{
+    font-size: 30px;
+}
+
+/* Special style for first letter of each p */
 p::first-letter{
     font-size: 140%;
     text-transform:capitalize;
+    color: hsl(0, 89%, 5%);
 }
 
-div.portfolio p{
+/* box shadow for porfolio paragraph */
+div.portfolio .special p{
     box-shadow: 3px 6px #566f4d;
 }
 
+/* color for schedule table */
 .schedule .special tr:nth-child(even){
-    background-color: hsl(65, 100%, 90%);
+    background-color: hsla(36, 100%, 79%, 0.9);
 }
 
+.schedule .special{
+    background: hsla(13, 100%, 84%, 0.9);
+}
+
+/* font and color for links */
 a{
   font-family: 'IM Fell Great Primer';  
   text-decoration: none; 
@@ -168,28 +247,36 @@ a{
   color: hsl(0, 100%, 20%);  
 } 
 
-/* Border */
+        /* BORDER */
 
+/* all headers top border rounded */
 h1, #contact, footer{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-div.portfolio, address, div.schedule{
+div.portfolio .special, address .special, div.schedule .special{
     border-right-style: 3px solid #fff;
     border-bottom-style: 3px solid #fff;
 }
 
-h1, div.navbar li{
-    border-style: round;
+/* rounded corners for navbar links */
+div.navbar li{
+    border-radius: 10px;
 }
 
-.schedule table{
-    border: ridge;
+/* formatting border for table */
+.schedule .special{
+    border: 10px ridge hsl(31, 45%, 16%);
     padding: 5px;
     vertical-align: baseline;
     empty-cells: show;
+    text-align: center;
 }
+ /* adding lines for table*/ 
+ .schedule .special tr, .schedule .special td{
+    border: 1px solid black;
+ }
 
 
 /* Background image */
@@ -200,7 +287,5 @@ body{
     background-color: hsl(350, 100%, 13%);
 }
 
-footer, #contact{
-    background-color: hsla(37, 100%, 46%, 0.6);
-}
+
 
