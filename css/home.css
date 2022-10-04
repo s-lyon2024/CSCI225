@@ -255,9 +255,13 @@ h1, #contact, footer{
     border-top-right-radius: 10px;
 }
 
-div.portfolio .special p, address .special a{
-    border-right-style: 3px solid rgb(24, 0, 0);
-    border-bottom-style: 3px solid rgb(24, 0, 0);
+.special p, address .special a, .assignment .special ol{
+    border-right-style: solid;
+    border-right-width: 3px;
+    border-right-color:rgb(24, 0, 0);
+    border-left-style: solid;
+    border-left-width: 3px;
+    border-left-color:rgb(24, 0, 0);
 }
 
 /* rounded corners for navbar links */
