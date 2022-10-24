@@ -3,16 +3,182 @@
 
 <head>
     <title> BMI Calculator </title>
+    <link rel="stylesheet" href="css/bmi.css">
 </head>
 
     <body>
-    <input type="text" id="UName" placeholder="Wus ya name?">
 
+<div id="inputDisplay">
+    <h1> BMI Calculator! </h1>
+
+    <p>
+    <input type="text" id="UName" placeholder="Wus ya name?">        
+    </p>
+
+    <p id="welcome"> </p>
+
+    <p>
     <input type="text" id="wInput" placeholder="Please enter weight"> 
-    <label id="lbs"> pounds </label>
+    <label id="lbs"> pounds </label>        
+    </p>
 
+    <p>
     <input type="text" id="hInput" placeholder="Please enter height"> 
-    <label id="inch"> inches </label>
+    <label id="inch"> inches </label>     
+    </p>
+
+    <p> 
+        <select id="agegroup">
+            <option> under 20 </option>
+            <option> 20-29</option>
+            <option> 30-39 </option>
+            <option> 40-49 </option>
+            <option> 50-59 </option>
+            <option> 60-69 </option>
+            <option> 70-79 </option>
+            <option> 80-89 </option>
+            <option> 90 or above </option>
+        </select>
+        Age
+    </p>
+
+    <p><input type="button" id = "resultsBtn" value="Compute BMI"> </p>   
+
+    <p id="BMIresult"> Your BMI is:  </p>
+
+    <p id = "weightAlert"> </p>
+</div>
+
+
+   <p id="index"><img src="images/bmiindex.png" alt="bmi index"> </p> 
+   <p id = "mii"><img src="images/Mii.png" alt="Mii"> </p> 
+   <span id="bar"> &#124 </span>
+
+
+
+
+    <script>
+        //event handler
+        function msgDisplay(){
+            var name = document.getElementById('UName').value;
+            document.getElementById('welcome').innerHTML= "Welcome <b>" +name.toString()+ "</b>!"; 
+        }
+        // event ---> event handler
+        var msgE = document.getElementById('UName').addEventListener('blur', msgDisplay, false);        
+
+         //event handler       
+        function inputDisplay(){
+
+            var ageIndex = document.getElementById('agegroup').selectedIndex;
+            var weight = parseFloat(document.getElementById('wInput').value);
+            var height = parseFloat(document.getElementById('hInput').value);
+            let BMI = 0;
+
+            // validating age
+            if (ageIndex == 0){
+                document.getElementById('BMIresult').innerHTML = "You're too young for this calculator! Refer to: "
+                + "<a href=\"https://www.cdc.gov/growthcharts/data/set1clinical/cj41l023.pdf\"> CDC body mass index-for-age percentiles</a>";
+            }
+            // validating weight and height integers
+            else if(Number.isNaN(Number.parseFloat(weight)) || Number.isNaN(Number.parseFloat(height))){
+                window.alert("Please enter a real number!!!");
+            }
+            else{
+                // BMI = weightx703/ height^2
+                BMI = (weight*703)/(height*height);
+                document.getElementById('BMIresult').innerHTML = "Your BMI is: " + BMI.toFixed(2);                
+            }
+
+            // opens new page if user is over 28 BMI
+            if ((BMI.toFixed(2)) >= 28) {
+                document.getElementById('weightAlert').textContent = "You're medically overweight. See this resource: "
+                window.open("https://www.nhlbi.nih.gov/health/educational/lose_wt/control.htm");
+            }
+
+            // animate transitions
+            
+            if((BMI.toFixed(2)) <= 10){
+                    mii.animate([{transform: 'scaleX(1.0)'},{transform:'scaleX(0.1)'}],
+                    {duration: 200, fill:"forwards"} );
+
+                    bar.animate([{transform: 'translate(0,0)'},{transform:'translate(25px,0px)'}],
+                    {duration: 200, fill:"forwards"} ); 
+                    }
+                    else if ((BMI.toFixed(2)) <= 15.5){
+                    mii.animate([{transform: 'scaleX(1.0)'},{transform:'scaleX(0.3)'}],
+                    {duration: 200, fill:"forwards"} );
+
+                    bar.animate([{transform: 'translate(0,0)'},{transform:'translate(90px,0px)'}],
+                    {duration: 200, fill:"forwards"} );  
+                    }
+                    else if ((BMI.toFixed(2)) <= 18.5){
+                    mii.animate([{transform: 'scaleX(1.0)'},{transform:'scaleX(0.6)'}],
+                    {duration: 200, fill:"forwards"} );
+                    
+                    bar.animate([{transform: 'translate(0,0)'},{transform:'translate(140px,0px)'}],
+                    {duration: 200, fill:"forwards"} );  
+                    }
+                    else if ((BMI.toFixed(2)) <= 23){
+                    mii.animate([{transform: 'scaleX(1.0)'},{transform:'scaleX(1.0)'}],
+                    {duration: 200, fill:"forwards"} );
+
+                    bar.animate([{transform: 'translate(0,0)'},{transform:'translate(200px,0px)'}],
+                    {duration: 200, fill:"forwards"} );  
+                    }
+                    else if ((BMI.toFixed(2)) <= 25){
+                    mii.animate([{transform: 'scaleX(1.0)'},{transform:'scaleX(1.2)'}],
+                    {duration: 200, fill:"forwards"} );
+
+                    bar.animate([{transform: 'translate(0,0)'},{transform:'translate(250px,0px)'}],
+                    {duration: 200, fill:"forwards"} );  
+                    }
+                    else if ((BMI.toFixed(2)) <= 27.5){
+                    mii.animate([{transform: 'scaleX(1.0)'},{transform:'scaleX(1.5)'}],
+                    {duration: 200, fill:"forwards"} );
+
+                    bar.animate([{transform: 'translate(0,0)'},{transform:'translate(335px,0px)'}],
+                    {duration: 200, fill:"forwards"} );  
+                    }
+                    else if ((BMI.toFixed(2)) <= 29.9){
+                    mii.animate([{transform: 'scaleX(1.0)'},{transform:'scaleX(1.8)'}],
+                    {duration: 200, fill:"forwards"} );
+
+                    bar.animate([{transform: 'translate(0,0)'},{transform:'translate(380px,0px)'}],
+                    {duration: 200, fill:"forwards"} );  
+                    }
+                    else if ((BMI.toFixed(2)) <= 32){
+                    mii.animate([{transform: 'scaleX(1.0)'},{transform:'scaleX(2.2)'}],
+                    {duration: 200, fill:"forwards"} );
+
+                    bar.animate([{transform: 'translate(0,0)'},{transform:'translate(400px,0px)'}],
+                    {duration: 200, fill:"forwards"} );  
+                    }
+                    else if ((BMI.toFixed(2)) <= 35.5){
+                    mii.animate([{transform: 'scaleX(1.0)'},{transform:'scaleX(2.5)'}],
+                    {duration: 200, fill:"forwards"} );
+
+                    bar.animate([{transform: 'translate(0,0)'},{transform:'translate(435px,0px)'}],
+                    {duration: 200, fill:"forwards"} ); 
+                    }
+                    else if ((BMI.toFixed(2)) <= 39.5){
+                    mii.animate([{transform: 'scaleX(1.0)'},{transform:'scaleX(2.8)'}],
+                    {duration: 200, fill:"forwards"} );
+
+                    bar.animate([{transform: 'translate(0,0)'},{transform:'translate(460px,0px)'}],
+                    {duration: 200, fill:"forwards"} ); 
+                    }
+                    else {
+                    mii.animate([{transform: 'scaleX(1.0)'},{transform:'scaleX(3.0)'}],
+                    {duration: 200, fill:"forwards"} );
+
+                    bar.animate([{transform: 'translate(0,0)'},{transform:'translate(490px,0px)'}],
+                    {duration: 200, fill:"forwards"} );   
+                    }
+            }
+            // event ---> event handler
+            var inpE = document.getElementById('resultsBtn').addEventListener('click', inputDisplay, false);
+
+    </script>
 
 
 
