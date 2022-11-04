@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Auto Service </title>
+    <!-- <link rel="stylesheet" href="css/bmi.css"> -->
+
+        <!-- Jquery library   ---->
+        <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+        </script>
+
+</head>
+<body>
+    
+
+
+
+<h1> What to do when your car cannot start: </h1>
+
+<form>
+
+<div id = "q1"> Does the start crank?       
+    <p>
+        <label>
+            <input type="radio" name="q1" value="yes">
+            Yes
+        </label>
+        <label>
+            <input type="radio" name="q1" value="no">
+            No
+        </label>
+    </p>
+</div>
+
+ <!-- q1 yes -->
+<div id = "q11"> Engine fires?
+    <p>
+        <label>
+            <input type="radio" name="q11" value="yes">
+            Yes
+        </label>
+        <label>
+            <input type="radio" name="q11" value="no">
+            No
+        </label>
+    </p>
+</div>
+
+<!-- q1 no -->
+<div id = "q12"> Starter spins?
+    <p>
+        <label>
+            <input type="radio" name="q12" value="yes">
+            Yes
+        </label>
+        <label>
+            <input type="radio" name="q12" value="no">
+            No
+        </label>
+    </p>
+</div>
+
+
+ <!-- q11 yes -->
+ <div id = "q111"> Starts and stalls?
+    <p>
+        <label>
+            <input type="radio" name="q111" value="yes">
+            Yes
+        </label>
+        <label>
+            <input type="radio" name="q111" value="no">
+            No
+        </label>
+    </p>
+</div>
+<!-- q11 no -->
+<div id = "q112"> Spark to plugs?
+    <p>
+        <label>
+            <input type="radio" name="q112" value="yes">
+            Yes
+        </label>
+        <label>
+            <input type="radio" name="q112" value="no">
+            No
+        </label>
+    </p>
+</div>
+
+<!-- q12 yes -->
+<div id = "q121"> 
+    <p>
+        Solenoid stuck, not powered. Missing teeth on flywheel.  
+    </p>
+</div>
+<!-- q12 no -->
+<div id = "q122"> Battery read over 12V?
+    <p>
+        <label>
+            <input type="radio" name="q122" value="yes">
+            Yes
+        </label>
+        <label>
+            <input type="radio" name="q122" value="no">
+            No
+        </label>
+    </p>
+</div>
+
+
+ <!-- q111 yes -->
+ <div id = "q1111"> Check OBD, blink code?
+    <p>
+        <label>
+            <input type="radio" name="q1111" value="yes">
+            Yes
+        </label>
+        <label>
+            <input type="radio" name="q1111" value="no">
+            No
+        </label>
+    </p>
+</div>
+ <!-- q111 no -->
+ <div id = "q1112"> 
+    <p>
+        Ignition timing, fuel problem, cranking too slow: battery and starter.
+    </p>
+</div>
+
+<!-- q122 yes -->
+<div id = "q1221"> Cleaned terminals?
+    <p>
+        <label>
+            <input type="radio" name="q1221" value="yes">
+            Yes
+        </label>
+        <label>
+            <input type="radio" name="q1221" value="no">
+            No
+        </label>
+    </p>
+</div>
+<!-- q122 no -->
+<div id = "q1222"> 
+    <p>
+        Jump start or pop start car, and check if battery is charging.
+    </p>
+</div>
+
+
+<!-- q112 yes -->
+<div id = "q1121"> Fuel to filter?
+    <p>
+        <label>
+            <input type="radio" name="q1121" value="yes">
+            Yes
+        </label>
+        <label>
+            <input type="radio" name="q1121" value="no">
+            No
+        </label>
+    </p>
+</div>
+<!-- q112 no -->
+<div id = "q1122"> Spark from coil?
+    <p>
+        <label>
+            <input type="radio" name="q1122" value="yes">
+            Yes
+        </label>
+        <label>
+            <input type="radio" name="q1122" value="no">
+            No
+        </label>
+    </p>
+</div>
+
+
+ <!-- q1111 yes -->
+ <div id = "q11111"> Stalls on key release to run?
+    <p>
+        <label>
+            <input type="radio" name="q11111" value="yes">
+            Yes
+        </label>
+        <label>
+            <input type="radio" name="q11111" value="no">
+            No
+        </label>
+    </p>
+</div>
+ <!-- q1111 no -->
+ <div id = "q11112"> 
+    <p>
+        Read OBD or OBD II or check for blink code access.
+    </p>
+</div>
+
+
+<!-- q1121 yes -->
+<div id = "q11211"> Fuel injected?
+    <p>
+        <label>
+            <input type="radio" name="q11211" value="yes">
+            Yes
+        </label>
+        <label>
+            <input type="radio" name="q11211" value="no">
+            No
+        </label>
+    </p>
+</div>
+<!-- q1121 no -->
+<div id = "q11212"> 
+    <p>
+    Vapor lock, fuel pump, blockage.
+    </p>
+</div>
+
+
+<!-- q1221 yes -->
+<div id = "q12211"> 
+    <p>
+        With car in park or neutreal, use heavy jumper or screwdriver to bypass starter relay solenoid. Test starter.
+    </p>
+</div>
+<!-- q1221 no -->
+<div id = "q12212"> 
+    <p>
+       Clean battery terminals and connectors, engine ground.
+    </p>
+</div>
+
+
+ <!-- q11111 yes -->
+ <div id = "q111111"> 
+    <p>
+        Ignition run circuit or column key switch failure. Ring out with meter.
+    </p>
+</div>
+ <!-- q11111 no -->
+ <div id = "q111112"> Stalls in rain?
+    <p>
+        <label>
+            <input type="radio" name="q111112" value="yes">
+            Yes
+        </label>
+        <label>
+            <input type="radio" name="q111112" value="no">
+            No
+        </label>
+    </p>
+</div>
+
+
+<!-- q11211 yes -->
+<div id = "q112111"> 
+    <p>
+        Single point, check throttle body. Electronic multi-point, separate disgnostic.
+    </p>
+</div>
+<!-- q11211 no -->
+<div id = "q11211"> Fuel injected?
+    <p>
+        Try starter spray in carb, throttle open.
+    </p>
+</div>
+
+
+<!-- q1122 yes -->
+<div id = "q11221"> Mechanical distributor?
+    <p>
+        <label>
+            <input type="radio" name="q11221" value="yes">
+            Yes
+        </label>
+        <label>
+            <input type="radio" name="q11221" value="no">
+            No
+        </label>
+    </p>
+</div>
+<!-- q1122 no -->
+<div id = "q11222"> 12V+ at coil primary?
+    <p>
+        <label>
+            <input type="radio" name="q11222" value="yes">
+            Yes
+        </label>
+        <label>
+            <input type="radio" name="q11222" value="no">
+            No
+        </label>
+    </p>
+</div>
+
+
+ <!-- q111112 yes -->
+ <div id = "q1111121"> 
+    <p>
+        Check for cracked coil, distributor. Check visible electrical arcing running in dark.
+    </p>
+</div>
+ <!-- q111112 no -->
+ <div id = "q1111122"> Stalls warm?
+    <p>
+        <label>
+            <input type="radio" name="q1111122" value="yes">
+            Yes
+        </label>
+        <label>
+            <input type="radio" name="q1111122" value="no">
+            No
+        </label>
+    </p>
+</div>
+
+
+<!-- q11222 yes -->
+<div id = "q112221"> 
+    <p>
+        Test coil for internal short. Check secondary output wire resistance.
+    </p>
+</div>
+<!-- q11222 no -->
+<div id = "q112222"> 
+    <p>
+        Ignition system wiring, voltage regulator.
+    </p>
+</div>
+
+
+<!-- q11221 yes -->
+<div id = "q112211"> 
+    <p>
+        Check condenser, points or magnetic pick-up, rotor, or cap damage.
+    </p>
+</div>
+<!-- q11221 no -->
+<div id = "q112212"> 
+    <p>
+        For electronic distribution, see model manual for diagnostic checks.
+    </p>
+</div>
+
+
+ <!-- q1111122 yes -->
+ <div id = "q11111221"> 
+    <p>
+        Adjust idle, blow out fuel filter, check fuel pump output. Check vacuum leak or sensor failure.
+    </p>
+</div>
+ <!-- q1111122 no -->
+ <div id = "q11111222"> 
+    <p>
+        On cold stalling, check for stuck choke, EGR. Check for vacuum leak.
+    </p>
+</div>
+
+</form>
+
+<script>
+    $('div').hide();
+    $('h1').show();
+    $("#q1").fadeIn(1000);
+
+    $('input[type="radio"]').change(function(){
+        var question = $(this).attr('name');
+        var id = "#" + question;
+        console.log(id);
+        var ans = $(this).attr('value');
+        $(id).fadeOut(1000);
+
+        if(ans == "yes"){
+            id = id + "1";
+        } else{
+            id = id + "2";
+        }
+        console.log(id);
+        $(id).fadeIn(2000);
+    }); 
+
+    /*
+    function nextQ(){
+        var q = document.querySelector('input[type="radio"]');
+        console.log(q);
+        var question = q.getAttribute('name');
+
+        var id = "#"+ question;
+        console.log(id);
+
+        var ans = q.getAttribute('value');
+        $(id).fadeOut(1000);
+
+        if(ans == "yes"){
+            id = id + "1";
+        } else{
+            id = id + "2";
+        }
+        console.log(id);
+        $(id).fadeIn(1000);
+    } */
+
+
+    //var inpQ = document.querySelector('input[type="radio"]').addEventListener('onchange', nextQ, false);
+
+</script>
+</body>
+</html>
