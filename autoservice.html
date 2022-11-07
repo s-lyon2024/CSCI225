@@ -366,8 +366,6 @@
 
 </form>
 
-
-
 <script>
     $('div').hide();
     $('h1').show();
@@ -388,31 +386,9 @@
         console.log(id);
         $(id).fadeIn(2000);
     }); 
-
-    /*
-    function nextQ(){
-        var q = document.querySelector('input[type="radio"]');
-        console.log(q);
-        var question = q.getAttribute('name');
-
-        var id = "#"+ question;
-        console.log(id);
-
-        var ans = q.getAttribute('value');
-        $(id).fadeOut(1000);
-
-        if(ans == "yes"){
-            id = id + "1";
-        } else{
-            id = id + "2";
-        }
-        console.log(id);
-        $(id).fadeIn(1000);
-    } */
-
-
-    //var inpQ = document.querySelector('input[type="radio"]').addEventListener('onchange', nextQ, false);
-
 </script>
+
+
+
 </body>
 </html>
